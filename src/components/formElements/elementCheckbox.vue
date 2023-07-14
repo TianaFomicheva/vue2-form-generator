@@ -1,0 +1,30 @@
+<template>
+  <div>
+    <div class="row">
+      <div class="label">{{ label }}</div>
+      <div class="field">
+        <input type="checkbox" v-model="proxyValue" />
+        <slot></slot>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  props: ["label", "value"],
+  computed: {
+    proxyValue: {
+      get() {
+        return this.value;
+      },
+      set(newValue) {
+        this.$emit("input", newValue);
+      },
+    },
+  },
+};
+</script>
+
+<style>
+</style>
