@@ -10,7 +10,7 @@
     <div class="slotData">{{field.customData}}</div>
     </component>
     <div v-if="schemaData.length>0" class="row button">
-    <button @click="submitData">Submit</button>
+    <button @click="submitData">Отправить</button>
     </div>
   </div>
 </template>
